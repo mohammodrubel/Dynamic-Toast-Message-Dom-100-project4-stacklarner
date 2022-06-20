@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#output{
+    padding: 10px;
+    margin: 10px;
+}
+#btn,#copy_color{
+    padding: 10px;
+    margin: 10px;
+    background-color: tomato;
+    border: none;
+    transition: .3s;
+    font-weight: 600;
+}
+.tost_msg {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background-color: gainsboro;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.tost_mas_slid_in {
+    animation: tost_masg_in 0.5s ease-in;
+}
+.tost_mas_slid_out {
+    animation: tost_masg_out 0.5s ease-in-out;
+}
+
+@keyframes tost_masg_in{
+    from{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes tost_masg_out{
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
